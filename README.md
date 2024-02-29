@@ -1,6 +1,6 @@
 # Blanat Challenge
 
-Blanat Challenge is a coding challenge designed to test your coding skills and your ability to write optimized code. [The challenge](#challenge-cheapest-city) primarily focuses on writing a program capable of efficiently handling large amounts of data and promptly returning the solution. It is open to everyone, and you can submit your code in any of the following languages: C, C++, Java, Rust, Python, PHP or JavaScript. This is your chance to demonstrate that your favorite programming language is the best and the fastest one! 😀
+Blanat Challenge is a coding challenge designed to test your coding skills and your ability to write optimized code. [The challenge](#challenge-the-cheapest-city) primarily focuses on writing a program capable of efficiently handling large amounts of data and promptly returning the solution. It is open to everyone, and you can submit your code in any of the following languages: C, C++, Java, Rust, Python, PHP or JavaScript. This is your chance to demonstrate that your favorite programming language is the best and the fastest one! 😀
 
 > This challenge is part of BlaBlaConf 2024, Make sure to check the [event](https://blablaconf.com)
 
@@ -8,7 +8,7 @@ Blanat Challenge is a coding challenge designed to test your coding skills and y
 
 - [Contents](#contents)
 - [Submit your solution](#submit-your-solution)
-- [Challenge: Cheapest city](#challenge-cheapest-city)
+- [Challenge: The Cheapest city](#challenge-the-cheapest-city)
   - [Constraints](#constraints)
   - [Output format](#output-format)
   - [Rules](#rules)
@@ -67,6 +67,7 @@ Assist Adnan by writing a program, using any allowed language, to find the city 
 - When you feel that your code is ready, create a folder under the "/submissions" folder with your GitHub handle as the name. Add the code to this folder and open a pull request (PR).
 - Before creating the PR, your code has to produce the same result as the output below.
 - You are allowed to submit the code several times with different langs.
+- Only standard libraries provided by te language you picked can be used. No external/additional libs can be used
 - Each code will be reviewed manually. Any fraudulent attempt will result in your account being banned, and you will be disqualified from the challenge.
 - Java solutions should use `Main.java` and have a `public class Main` as a top-level class.
 - Contestants are supposed to read input from the file in their current working directory named `input.txt` and write the output to a file in the same directory named `output.txt`.
@@ -76,6 +77,14 @@ Assist Adnan by writing a program, using any allowed language, to find the city 
 ### Testing
 
 You can find an example of the input file [here](./input.txt). This file contains 1 million line to run your tests and validate your solution. The result contaning the correct answer from running the program against the 1M input file is saved in [this file](./output.txt)
+
+You can also use the script found at `gen.py` to generate arbitrarily large test cases similar to the ones that we will use to validate your submission on the blanat server.
+
+```
+python3 gen.py --rows <number_of_rows>
+```
+
+> Note that to generate the 1B row file, it will require a couple of minutes to generate and would take around `~22Gb` of disk space.
 
 ### INPUT
 Below are short examples for better understanding:
@@ -125,8 +134,8 @@ Tetouan 48.50
 gaz 1.30
 potato 3.50
 tomato 3.50
+sugar 4.50
 flour 5.20
-oil 6.70
 ```
 
 **Explanation: Tetouan is the cheapest city because it has a total price of 48.50, while Casa has a total price of 93.73 and Rabat has a total price of 78.10.**
@@ -141,12 +150,41 @@ The competition focuses solely on correctness and speed of execution to gauge pa
 The challenge will run from the 19th of February 2024 until 29th of February 2024. The winner will be announced during March 1st 2024 in our social media challenges
 
 ## Leaderboard
+> Last updated: Thu 28 Feb 2024, 8pm Moroccan time
 
-> Coming soon
+| Username       | Avg Time (ms) | Median Time (ms) | Language | Humanized Time                |
+|----------------|---------------|------------------|----------|-------------------------------|
+| anassajaanan   | 14024         | 12351            | c       | 14.02 sec (≈ 14.02 sec)      |
+| ouakki         | 29182         | 28706            | go      | 29.18 sec (≈ 29.18 sec)      |
+| ILKAY-BRAHIM   | 31368         | 23004            | cpp      | 31.37 sec (≈ 31.37 sec)      |
+| sqrt-minus-one | 35369         | 34040            | cpp     | 35.37 sec (≈ 35.37 sec)      |
+| ibrataha8     | 53029         | 51788            | cpp     | 53.03 sec (≈ 53.03 sec)      |
+| dauom         | 56548         | 57044            | cpp     | 56.55 sec (≈ 56.55 sec)      |
+| webNeat        | 61003         | 57203           | cpp      | 61.00 sec (≈ 61.00 sec)      |
+| samir-        | 63933         | 67410            | cpp     | 63.93 sec (≈ 63.93 sec)      |
+| essmehdi      | 68107         | 62067            | rs      | 68.11 sec (≈ 68.11 sec)      |
+| NotAsheraf     | 99730         | 97091            | rs      | 99.73 sec (≈ 99.73 sec)      |
+| yousfiSaad    | 181086        | 176295           | cpp     | 181.09 sec (≈ 181.09 sec)    |
+| imOphen       | 222679        | 213030           | py      | 222.68 sec (≈ 222.68 sec)    |
+| mohammedfatihX| 249995        | 252203           | java    | 249.99 sec (≈ 249.99 sec)    |
+| nizarbenalla  | 275221        | 269733           | java    | 275.22 sec (≈ 275.22 sec)    |
+| houcine7      | 309110        | 309692           | java    | 309.11 sec (≈ 309.11 sec)    |
+| j-mounim     | 343753        | 345267           | js      | 343.75 sec (≈ 343.75 sec)    |
+| lhousaine    | 336290        | 354104           | js      | 336.29 sec (≈ 336.29 sec)    |
+| Moohaa         | 356836        | 359523           | java    | 356.84 sec (≈ 356.84 sec)    |
+| aboullaite    | 368758        | 368167           | java    | 368.76 sec (≈ 368.76 sec)    |
+| YassineOsip    | 561658        | 569382           | python      | 561.66 sec (≈ 561.66 sec)    |
+| guizo792      | 526844        | 550883           | java    | 526.84 sec (≈ 526.84 sec)    |
+| Smartdev110    | 776007        | 792428           | java    | 776.01 sec (≈ 776.01 sec)    |
+| sm3xy         | 903274        | 900806           | python      | 903.27 sec (≈ 903.27 sec)    |
+
+
+
+We only list solutions with correct results that run within ~15 min. We unfortunately can't give feedback on every submission and we invite you to read the full assignment.
 
 ## Prize
 
-The (one) winner will win 6000 MAD (or a PS5 :D). The winner needs to have a valid [blalaconf ticket](blablaconf.com/ticket) and can receive the prize in Morocco. International transfer or shipping isn't possible.
+The (one) winner will win 6000 MAD (or a PS5 :D). The winner needs to have a valid [blalaconf ticket](https://blablaconf.com/ticket) and can receive the prize in Morocco. International transfer or shipping isn't possible.
 The winner will be announced on the last day of BlaBlaConf 2024. Stay tuned for more information. Make sure to check the live event on [YouTube](https://www.youtube.com/watch?v=-peiFexaSWg).
 
 ## I have a question
